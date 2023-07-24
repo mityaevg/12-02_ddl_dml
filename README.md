@@ -98,3 +98,26 @@ unzip sakila-db.zip
 ls -l ./sakila-db
 ```
 <kbd>![](img/ls-l_sakila-db.png)</kbd>
+
+1.7. Восстановите дамп в базу данных:
+
+- Сначала скачаем и установим программу **DBeaver**:
+```
+wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo dpkg -i  dbeaver-ce_latest_amd64.deb
+dbeaver &
+```
+- Восстановим дамп в базу **dvd_rental**:
+
+<kbd>![](img/dbeaver_restore_database.png)</kbd>
+```
+/usr/bin
+```
+
+- Сначала импортируем **/home/mityaevg/sakila-db/sakila-schema.sql**:
+
+<kbd>![](img/restore_sakila-schema_sql.png)</kbd>
+
+- Затем импортируем **/home/mityaevg/sakila-db/sakila-data.sql**:
+
+<kbd>![](img/restore_sakila-data_sql.png)</kbd>
