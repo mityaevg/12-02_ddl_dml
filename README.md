@@ -126,3 +126,7 @@ dbeaver &
 
 <kbd>![](img/sakila-database_entity_relationship_diagram.png)</kbd>
 
+### Задание 2.
+Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст).
+
+[primary_keys.xls](https://github.com/mityaevg/12-02_ddl_dml/files/12146137/primary_keys.xls)
