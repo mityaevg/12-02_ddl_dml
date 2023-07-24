@@ -121,3 +121,8 @@ dbeaver &
 - Затем импортируем **/home/mityaevg/sakila-db/sakila-data.sql**:
 
 <kbd>![](img/restore_sakila-data_sql.png)</kbd>
+
+1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных:
+
+<kbd>![](img/sakila-database_entity_relationship_diagram.png)</kbd>
+
