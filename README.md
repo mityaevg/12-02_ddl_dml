@@ -41,4 +41,60 @@ systemctl status mysql.service
 ```
 <kbd>![](img/mysql_service_status.png)</kbd>
 
-  
+1.2. Создайте учётную запись sys_temp.
+- Зайдем в консоль **MySQL** под пользователем **root**:
+```
+sudo mysql -u root -p
+```
+<kbd>![](img/mysql_console_root.png)</kbd>
+
+- Создадим пользователя **sys_temp** c паролем **12345**:
+```
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY '12345';
+```
+<kbd>![](img/create_user_sys_temp.png)</kbd>
+
+1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот):
+```
+SELECT user FROM mysql.user;
+```
+<kbd>![](img/select_user.png)</kbd>
+
+1.4. Дайте все права для пользователя sys_temp:
+```
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
+```
+<kbd>![](img/sys_temp_grant_all_privileges.png)</kbd>
+
+1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот):
+```
+SHOW GRANTS FOR 'sys_temp'@'localhost';
+```
+<kbd>![](img/show_grants_sys_temp.png)</kbd>
+
+1.6. Переподключитесь к базе данных от имени sys_temp:
+```
+sudo mysql -u systemp -p
+```
+<kbd>![](img/sys_temp_db_log_in.png)</kbd>
+
+- Создадим новую базу данных **dvdrental**:
+```
+CREATE DATABASE dvd_rental;
+```
+<kbd>![](img/create_db_dvd_rental.png)</kbd>
+
+- Проверим список баз данных в системе:
+```
+SHOW DATABASES;
+```
+<kbd>![](img/show_databases_dvd_rental.png)</kbd>
+
+- По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных и распакуем архив
+  **sakila-db.zip** в директорию **/home/mityaevg/sakila-db**:
+```
+https://downloads.mysql.com/docs/sakila-db.zip
+unzip sakila-db.zip
+ls -l ./sakila-db
+```
+<kbd>![](img/ls-l_sakila-db.png)</kbd>
